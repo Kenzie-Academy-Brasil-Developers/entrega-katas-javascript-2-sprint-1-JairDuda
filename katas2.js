@@ -9,8 +9,8 @@ console.assert(add(3, 5) === 8, 'A função add não está funcionando como espe
 // comece a criar a sua função multiply na linha abaixo
 function multiply(a, b){
     let count = 0;
-    for (let i=0; i < b ;i++){
-        count += add(a, 0);
+    for (let i=1; i <= a ;i++){
+        count = add(b, count);
     }
     return count
 }
@@ -21,7 +21,7 @@ console.assert(multiply(4, 6) === 24, 'A função multiply não está funcionand
 
 function power(a, b){
     let count = 1;
-    for (let i = 1; i <= b; i++) { 
+    for (let i = 0; i < b; i++) { 
         count = multiply(count, a);
     }
     return count;
@@ -33,11 +33,19 @@ console.assert(power(3, 4) === 81, 'A função power não está funcionando como
 
 function factorial(a){
     let count = 1;
-    for (let i= a; i > 1 ;i--){
+    for (let i = a; i > 1 ;i--){
         count = multiply(i, count);
     }
     return count
 }
+
+// function factorial(a){
+//     let count = 1;
+//     for (let i= a; i > 1 ;i--){
+//         count = multiply(i, count);
+//     }
+//     return count
+// }
 
 console.assert(factorial(5) === 120, 'A função factorial não está funcionando como esperado');
 
