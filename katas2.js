@@ -50,7 +50,7 @@ function factorial(a){
 console.assert(factorial(5) === 120, 'A função factorial não está funcionando como esperado');
 
 function fibonacci(a){
-    let count = 0;
+    let count = 1;
     let count2 = 1;
     let nextCount;
     
@@ -64,4 +64,4 @@ function fibonacci(a){
     return count
 }
 
-console.assert(fibonacci(8) === 13, 'A função fibonacci não está funcionando como esperado');
+console.assert(fibonacci(7) === 13, 'A função fibonacci não está funcionando como esperado');
